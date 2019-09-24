@@ -539,7 +539,7 @@ bool Visualizer::save_extrinsic_in_yaml(const std::string &camera_name,
   y_file << "    secs: 0\n";
   y_file << "    nsecs: 0\n";
   y_file << "  frame_id: velodyne128\n";
-  y_file << "child_frame_id: %s\n", camera_name.c_str();
+  y_file << "child_frame_id: " << camera_name.c_str() << "\n";
   y_file << "transform:\n";
   y_file << "  translation:\n";
   y_file << "    x: " << extrinsic(0, 3) << "\n";
